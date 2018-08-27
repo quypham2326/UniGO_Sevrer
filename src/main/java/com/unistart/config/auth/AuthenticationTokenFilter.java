@@ -43,11 +43,7 @@ public class AuthenticationTokenFilter extends UsernamePasswordAuthenticationFil
         Users user = null;
         if (provider != null) {
             if (provider.equalsIgnoreCase(PROVIDER_GOOGLE)) {
-                try {
-                    user = googleVerifierService.findUserByGoogleToken(authToken);
-                } catch (GeneralSecurityException ex) {
-                    ex.printStackTrace();
-                }
+                user = googleVerifierService.findUserByGoogleToken(authToken);
             }
             if (provider.equalsIgnoreCase(PROVIDER_FACEBOOK)) {
 
