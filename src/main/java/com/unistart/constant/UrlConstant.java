@@ -122,4 +122,8 @@ public class UrlConstant {
     //Report
     public static final String REPORT = "/report";
 
+    //Group Major
+    public static final String GROUP_MAJOR="/group-major";
+    public static final String SHOW_GROUP_MAJOR="/show-group-major";
+    public static final String SHOW_MAJOR_IN_GROUP="show-major-in-group";
 }

@@ -39,7 +39,7 @@ public class UserService implements UserServiceInterface {
             user = new Users();
             user.setUsername(username);
             String encodedPassword = bcrypt.encode(password);
-            Role role = roleRepository.findById(1);
+            Role role = roleRepository.findById(2);
             user.setPassword(encodedPassword);
             user.setEmail(email);
             user.setIsActive(true);

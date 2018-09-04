@@ -72,5 +72,11 @@ public class MajorController {
         List<MajorUniversity> major = majorService.getForTag(uniId);
         return new ResponseEntity<List<MajorUniversity>>(major, HttpStatus.OK);
     }
-
+    
+    @RequestMapping(value = UrlConstant.SHOW_MAJOR_IN_GROUP, method = RequestMethod.GET)
+    public ResponseEntity<?> getMajorByGroupMajorId() {
+        List<Major> majors = majorService.listMajorGroup();
+        return new ResponseEntity<List<Major>>(majors, HttpStatus.OK);
+    }
+    
 }

@@ -77,7 +77,7 @@ public class MajorService implements MajorServiceInterface {
         majorUniRepo.changeIsActive(majorUniId, isActive);
         return true;
     }
-
+    
     @Override
     public boolean saveMajorUniDetail(int id, double year, String des, String requirement, String pros) {
         MajorUniversity majorUni = majorUniRepo.findById(id);
@@ -103,6 +103,11 @@ public class MajorService implements MajorServiceInterface {
     @Override
     public List<MajorUniversity> getForTag(int uniId) {
         return majorUniRepo.findByIdForTag(uniId);
+    }
+
+    @Override
+    public List<Major> listMajorGroup() {
+        return majorRepository.findByGroupMajorId(2);
     }
 
 }
