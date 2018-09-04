@@ -78,5 +78,9 @@ public class MajorController {
         List<Major> majors = majorService.listMajorGroup();
         return new ResponseEntity<List<Major>>(majors, HttpStatus.OK);
     }
-    
+    @RequestMapping(value=UrlConstant.CREATE,method = RequestMethod.POST)
+    public ResponseEntity<?> createMajor(@RequestBody int i)
+    {
+        return null;
+    }
 }

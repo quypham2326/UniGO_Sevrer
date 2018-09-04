@@ -81,4 +81,9 @@ public class TrainSystem {
         this.university = university;
     }
 
+    public TrainSystem(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
 }

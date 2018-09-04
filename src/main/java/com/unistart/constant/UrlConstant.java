@@ -126,4 +126,7 @@ public class UrlConstant {
     public static final String GROUP_MAJOR="/group-major";
     public static final String SHOW_GROUP_MAJOR="/show-group-major";
     public static final String SHOW_MAJOR_IN_GROUP="show-major-in-group";
+    
+    //Train System
+    public static final String Train_System="/train-system";
 }
