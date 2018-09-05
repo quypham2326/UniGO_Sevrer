@@ -14,6 +14,6 @@ public interface TrainRepository extends JpaRepository<TrainSystem, Integer> {
     TrainSystem findById(int id);
 
     @Modifying
-    @Query("select id,name from TrainSystem where isActive=1")
+    @Query("select new com.unistart.entities.TrainSystem(id,name) from TrainSystem where isActive=1")
     List<TrainSystem> getAllTrainSystem();
 }

@@ -9,7 +9,6 @@ import com.unistart.constant.UrlConstant;
 import com.unistart.entities.TrainSystem;
 import com.unistart.services.TrainSystemService;
 import java.util.List;
-import javax.ws.rs.GET;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.Repository;
 import org.springframework.http.HttpStatus;
