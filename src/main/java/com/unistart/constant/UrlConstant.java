@@ -132,5 +132,5 @@ public class UrlConstant {
     
     //Mbti type
     public static final String MBTI_TYPE="/mbti-type";
-    public static final String GET_ALL_MBTI_TYPE="get-all-mbti-type";
+    public static final String GET_ALL_MBTI_TYPE="/get-all-mbti-type";
 }
