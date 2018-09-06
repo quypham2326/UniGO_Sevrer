@@ -32,4 +32,6 @@ public class ErrorConstant {
 	
 	//Question 
 	public static final String MES017 = "No question need accept";
+        //Group Major
+        public static final String MES018="";
 }

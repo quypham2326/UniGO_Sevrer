@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import com.unistart.entities.Mbtiresult;
-import com.unistart.entities.University;
 
 public interface MBTIResultRepository extends JpaRepository<Mbtiresult, Integer>{
 

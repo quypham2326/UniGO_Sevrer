@@ -34,7 +34,7 @@ public class Article implements java.io.Serializable {
 	private String universityName;
 	private int universityId;
 	private Boolean isActive;
-	private int[] tags;
+	private int[] tags = new int[0];
 	
 	public Article() {
 		super();

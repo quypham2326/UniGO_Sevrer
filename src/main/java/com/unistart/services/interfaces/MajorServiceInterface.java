@@ -12,6 +12,8 @@ public interface MajorServiceInterface {
 
     List<Major> listPopularMajor();
 
+    List<Major> listMajorGroup();
+    
     Major getMajorById(int id);
 
     boolean saveMajorUniversity(Major major, University uni);
@@ -31,4 +33,5 @@ public interface MajorServiceInterface {
     List<MajorUniversity> getByUniversityId(int uniId);
 
     List<MajorUniversity> getForTag(int uniId);
+    
 }
