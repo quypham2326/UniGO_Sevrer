@@ -26,6 +26,5 @@ public interface MajorRepository extends CrudRepository<Major, Integer> {
     }
 
     Major findById(int id);
-    
-    List<Major> findByGroupMajorId(int GroupMajorId);
+
 }

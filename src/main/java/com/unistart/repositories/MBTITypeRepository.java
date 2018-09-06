@@ -1,21 +1,18 @@
 package com.unistart.repositories;
 
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.unistart.entities.Mbtitype;
-import java.util.List;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface MBTITypeRepository extends JpaRepository<Mbtitype, Integer> {
 
-    Mbtitype findByMbtitypeName(String name);
-    Mbtitype findById(int id);
+	Mbtitype findByMbtitypeName(String name);
+	
+	Mbtitype findById(int id);
 
-    @Query(value = "SELECT Id,MBTITypeName,Description,contentType,isActive FROM MBTIType",nativeQuery = true)
-    public List<Mbtitype> getMBTIType();
-
+	@Query("select m.id , m.contentType from Mbtitype m where m.isActive = 1")
+	List<Mbtitype> getContentType();
 }

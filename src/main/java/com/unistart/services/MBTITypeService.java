@@ -1,44 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.unistart.services;
 
 import com.unistart.entities.Mbtitype;
 import com.unistart.repositories.MBTITypeRepository;
 import com.unistart.services.interfaces.MBTITypeServiceInterface;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Le Nguyen
- */
+import java.util.List;
+
 @Service
-public class MBTITypeService implements MBTITypeServiceInterface{
-    @Autowired
-    private MBTITypeRepository mbtiTypeRepo;
-    
-    @Override
-    public boolean deleteMbtiType(int id) {
-        return true;
-    }
+@Transactional
+public class MBTITypeService implements MBTITypeServiceInterface {
 
-    @Override
-    public boolean updateMbtiType(int id, String mbtiTypeName, String description, String contentType) {
-        return true;
-    }
-
-    @Override
-    public boolean createMbtiType(String mbtiTypeName, String description, String contentType) {
-        return true;
-    }
-
-    @Override
-    public List<Mbtitype> getListMbtiType() {
-        return mbtiTypeRepo.getMBTIType();
-    }
-    
+//    private final MBTITypeRepository mbtiTypeRepository;
+//    @Autowired
+//    public MBTITypeService(MBTITypeRepository mbtiTypeRepository) {
+//        this.mbtiTypeRepository = mbtiTypeRepository;
+//    }
+//
+//
+//    @Override
+//    public List<Mbtitype> getAllType() {
+//        return mbtiTypeRepository.getContentType();
+//    }
 }

@@ -59,7 +59,6 @@ public class UniversityController {
         String description = university.getDescription();
         int priority = university.getPriority();
         int trainSystem = university.getTrainSystem().getId();
-        //List<Major> listMajors=university.getListMajors();
         boolean isCreated = universityService.addUniversity(code, name, email, phone, logo, image, priority, description, trainSystem);
         University uni = universityService.getUniversityByCode(code);
         if (isCreated) {
@@ -159,7 +158,7 @@ public class UniversityController {
         error = new ErrorNotification(ErrorConstant.MES006);
         return new ResponseEntity<ErrorNotification>(error, HttpStatus.CONFLICT);
     }
-    
+
     @RequestMapping(value = UrlConstant.GET_LOCATION_BY_ID, method = RequestMethod.GET)
     public ResponseEntity<?> getLocationById(@RequestParam(value = "universityId") int universityId) {
         uni = universityService.getUniversityShort(universityId);
