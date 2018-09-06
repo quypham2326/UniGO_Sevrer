@@ -6,12 +6,11 @@
 package com.unistart.controller;
 
 import com.unistart.constant.UrlConstant;
-import com.unistart.entities.TrainSystem;
-import com.unistart.services.TrainSystemService;
+import com.unistart.entities.Mbtitype;
+import com.unistart.services.MBTITypeService;
 import java.util.List;
-import javax.ws.rs.GET;
+import org.apache.http.protocol.HTTP;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.Repository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,16 +22,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Le Nguyen
  */
 @RestController
-@RequestMapping(UrlConstant.TRAIN_SYSTEM)
-public class TrainController {
+@RequestMapping(value = UrlConstant.MBTI_TYPE)
+public class MBTITypeController {
     
     @Autowired
-    private TrainSystemService trainService;
-    List<TrainSystem> listTrain;
-    @RequestMapping(value = UrlConstant.VIEW,method = RequestMethod.GET)
-    public ResponseEntity<?> getAllTrainSystem()
-    {
-        listTrain=trainService.getAllTrainSystem();
-        return new ResponseEntity<List<TrainSystem>>(listTrain,HttpStatus.OK);
+    private MBTITypeService mbtiTypeService;
+    private List<Mbtitype> listMbtiType;
+    @RequestMapping(value = UrlConstant.GET_ALL_MBTI_TYPE,method = RequestMethod.GET)
+    public ResponseEntity<?> getListMbtiType(){
+        listMbtiType=mbtiTypeService.getListMbtiType();
+        System.out.println("aaa");
+        return new ResponseEntity<List<Mbtitype>>(listMbtiType,HttpStatus.OK);
     }
 }

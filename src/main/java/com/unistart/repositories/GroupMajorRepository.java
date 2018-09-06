@@ -25,6 +25,6 @@ public interface GroupMajorRepository extends JpaRepository<GroupMajor, Integer>
     @Query("update GroupMajor set name=?3 where id = ?1 and code=?2")
     void updateGroupMajor(int id, String code, String name);
 
-    @Query("select id,code,name from GroupMajor where isActive = 1")
+    @Query("select new com.unistart.entities.GroupMajor( id,code,name) from GroupMajor where isActive = 1")
     List<GroupMajor> getAllGroupMajor();
 }

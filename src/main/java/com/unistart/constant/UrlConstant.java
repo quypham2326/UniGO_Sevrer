@@ -128,5 +128,9 @@ public class UrlConstant {
     public static final String SHOW_MAJOR_IN_GROUP="show-major-in-group";
     
     //Train System
-    public static final String Train_System="/train-system";
+    public static final String TRAIN_SYSTEM="/train-system";
+    
+    //Mbti type
+    public static final String MBTI_TYPE="/mbti-type";
+    public static final String GET_ALL_MBTI_TYPE="get-all-mbti-type";
 }
