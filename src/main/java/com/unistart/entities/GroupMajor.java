@@ -37,6 +37,12 @@ public class GroupMajor {
 		this.name = name;
 		this.majors = majors;
 	}
+
+    public GroupMajor(Integer id, String code, String name) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+    }
 	
 	public GroupMajor(Integer id, String code, String name, boolean isActive, Set<Major> majors) {
 		super();
@@ -46,6 +52,10 @@ public class GroupMajor {
 		this.isActive = isActive;
 		this.majors = majors;
 	}
+
+    public GroupMajor(String code, String name, boolean active) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id", unique = true, nullable = false)

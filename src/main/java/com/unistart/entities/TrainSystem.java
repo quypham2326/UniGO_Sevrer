@@ -42,6 +42,11 @@ public class TrainSystem {
         this.university = university;
     }
 
+    public TrainSystem(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", unique = true, nullable = false)
