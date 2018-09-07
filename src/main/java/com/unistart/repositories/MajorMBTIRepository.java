@@ -9,5 +9,6 @@ import com.unistart.entities.MajorMbti;
 
 
 public interface MajorMBTIRepository extends JpaRepository<MajorMbti, Integer>{
-
+    @Query("update MajorMbti set isActive=0 where id=?1")
+    void updateMajorMbti(int id);
 }

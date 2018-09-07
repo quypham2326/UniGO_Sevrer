@@ -1,5 +1,6 @@
 package com.unistart.repositories;
 
+import com.unistart.entities.GroupMajor;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
@@ -26,5 +27,6 @@ public interface MajorRepository extends CrudRepository<Major, Integer> {
     }
 
     Major findById(int id);
+    List<Major> findByGroupMajorId(int groupMajorID);
 
 }

@@ -20,15 +20,18 @@ public class MBTITypeService implements MBTITypeServiceInterface {
         return mbtiTypeRepo.getContentType();
        }
 
-//    private final MBTITypeRepository mbtiTypeRepository;
-//    @Autowired
-//    public MBTITypeService(MBTITypeRepository mbtiTypeRepository) {
-//        this.mbtiTypeRepository = mbtiTypeRepository;
-//    }
-//
-//
-//    @Override
-//    public List<Mbtitype> getAllType() {
-//        return mbtiTypeRepository.getContentType();
-//    }
+    @Override
+    public boolean createMbtiType(String contentType, String description, String mbtitypeName) {
+        return true;
+    }
+
+    @Override
+    public boolean deleteMbtiType(int id) {
+        return true;
+    }
+
+    @Override
+    public boolean updateMbtiType(int id, String contentType, String description, String mbtitypeName) {
+        return true;
+    }
 }

@@ -53,9 +53,13 @@ public class GroupMajor {
 		this.majors = majors;
 	}
 
-    public GroupMajor(String code, String name, boolean active) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public GroupMajor(String code, String name, boolean isActive) {
+        this.code = code;
+        this.name = name;
+        this.isActive = isActive;
     }
+
+    
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id", unique = true, nullable = false)

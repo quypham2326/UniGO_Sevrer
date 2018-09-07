@@ -8,6 +8,7 @@ package com.unistart.controller;
 import com.unistart.constant.ErrorConstant;
 import com.unistart.constant.UrlConstant;
 import com.unistart.entities.GroupMajor;
+import com.unistart.entities.Major;
 import com.unistart.error.ErrorNotification;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.unistart.services.interfaces.GroupMajorServiceInterface;
+import com.unistart.services.interfaces.MajorServiceInterface;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -29,7 +32,10 @@ import com.unistart.services.interfaces.GroupMajorServiceInterface;
 public class GroupMajorController {
     @Autowired
     private GroupMajorServiceInterface groupMajorService;
+    @Autowired
+    private MajorServiceInterface majorService;
     private List<GroupMajor> listGroupMajor;
+    private List<Major> listMajor;
     private ErrorNotification error;
     @RequestMapping(value = UrlConstant.CREATE,method = RequestMethod.POST)
     public ResponseEntity<?> saveGroupMajor(@RequestBody GroupMajor groupMajor)
@@ -64,5 +70,11 @@ public class GroupMajorController {
     {
         listGroupMajor=groupMajorService.getAllGroupMajor();
         return new ResponseEntity<List<GroupMajor>>(listGroupMajor, HttpStatus.OK);
+    }
+    @RequestMapping(value = UrlConstant.SHOW_MAJOR_IN_GROUP,method = RequestMethod.GET)
+    public ResponseEntity<?> getMajorInGroup(@RequestParam(value = "groupMajorId") int groupMajorId)
+    {
+        listMajor=majorService.findByGroupMajorId(groupMajorId);
+        return new ResponseEntity<List<Major>>(listMajor,HttpStatus.OK);
     }
 }

@@ -31,4 +31,6 @@ public interface MajorServiceInterface {
     List<MajorUniversity> getByUniversityId(int uniId);
 
     List<MajorUniversity> getForTag(int uniId);
+    
+    List<Major> findByGroupMajorId(int groupMajorID);
 }

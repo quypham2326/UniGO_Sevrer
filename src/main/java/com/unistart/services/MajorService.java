@@ -105,4 +105,9 @@ public class MajorService implements MajorServiceInterface {
         return majorUniRepo.findByIdForTag(uniId);
     }
 
+    @Override
+    public List<Major> findByGroupMajorId(int groupMajorID) {
+        return majorRepository.findByGroupMajorId(groupMajorID);
+    }
+
 }
