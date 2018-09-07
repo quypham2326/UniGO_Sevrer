@@ -5,11 +5,14 @@
  */
 package com.unistart.services;
 
+import com.unistart.entities.Major;
 import com.unistart.entities.MajorMbti;
+import com.unistart.entities.Mbtitype;
 import com.unistart.repositories.MajorMBTIRepository;
 import com.unistart.services.interfaces.MajorMbtiServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -17,14 +20,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MajorMbtiService implements MajorMbtiServiceInterface{
+    
 @Autowired
 private MajorMBTIRepository majorMbtiRepo;
     @Override
     public boolean createMajorMbti(MajorMbti majorMbti) {
-        MajorMbti major=new MajorMbti();
-        major.setMajor(majorMbti.getMajor());
-        major.setMbtitype(major.getMbtitype());
-        major.setIsActive(true);
+        majorMbti.setIsActive(true);
         majorMbtiRepo.save(majorMbti);
         return true;
     }

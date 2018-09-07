@@ -7,6 +7,7 @@ package com.unistart.controller;
 
 import com.unistart.constant.UrlConstant;
 import com.unistart.entities.MajorMbti;
+import com.unistart.services.MajorMbtiService;
 import com.unistart.services.interfaces.MajorMbtiServiceInterface;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = UrlConstant.MAJOR_MBTI)
-public class MajorMbtiController{
-    
+public class MajorMbtiController{    
     @Autowired
-    private MajorMbtiServiceInterface majorMbtiServiceInterface;
+    private MajorMbtiService majorMbtiServiceInterface;
+    
     @PostMapping(value =  UrlConstant.CREATE)
     public ResponseEntity<?> createMajorMbti(@RequestBody List<MajorMbti> listMajorMbti)
     {

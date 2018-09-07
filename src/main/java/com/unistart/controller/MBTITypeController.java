@@ -17,6 +17,7 @@ public class MBTITypeController {
 
     @Autowired
     private MBTITypeService mbtiTypeService;
+    
     List<Mbtitype> mbtiTypes;
     @RequestMapping(value = UrlConstant.GET_ALL_MBTI_TYPE, method = RequestMethod.GET)
     public ResponseEntity<?> getMbtiType() {
