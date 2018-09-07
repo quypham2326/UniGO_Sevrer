@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.unistart.services.interfaces.GroupMajorServiceInterface;
 import com.unistart.services.interfaces.MajorServiceInterface;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -71,7 +72,7 @@ public class GroupMajorController {
         listGroupMajor=groupMajorService.getAllGroupMajor();
         return new ResponseEntity<List<GroupMajor>>(listGroupMajor, HttpStatus.OK);
     }
-    @RequestMapping(value = UrlConstant.SHOW_MAJOR_IN_GROUP,method = RequestMethod.GET)
+    @GetMapping(value = UrlConstant.SHOW_MAJOR_IN_GROUP)
     public ResponseEntity<?> getMajorInGroup(@RequestParam(value = "groupMajorId") int groupMajorId)
     {
         listMajor=majorService.findByGroupMajorId(groupMajorId);

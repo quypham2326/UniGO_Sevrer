@@ -32,7 +32,35 @@ public class Major implements java.io.Serializable {
 	private Set<MajorUniversity> majorUniversities = new HashSet<MajorUniversity>(0);
 	private Set<MajorMbti> majorMbtis = new HashSet<MajorMbti>(0);
 	private Set<BlockOfMajor> blockOfMajors = new HashSet<BlockOfMajor>(0);
+        private int[] mbtiTypeId;
+        private int [] blockId;
 
+    public int[] getBlockId() {
+        return blockId;
+    }
+
+    public void setBlockId(int[] blockId) {
+        this.blockId = blockId;
+    }
+
+    public Major(GroupMajor groupMajor, String majorName, String description, int[] mbtiTypeId, int[] blockId) {
+        this.groupMajor = groupMajor;
+        this.majorName = majorName;
+        this.description = description;
+        this.mbtiTypeId = mbtiTypeId;
+        this.blockId = blockId;
+    }
+
+    public int[] getMbtiTypeId() {
+        return mbtiTypeId;
+    }
+
+    public void setMbtiTypeId(int[] mbtiTypeId) {
+        this.mbtiTypeId = mbtiTypeId;
+    }
+        
+    
+        
 	public Major() {
 	}
 

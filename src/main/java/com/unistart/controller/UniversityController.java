@@ -58,6 +58,7 @@ public class UniversityController {
         String image = university.getImage();
         String description = university.getDescription();
         int priority = university.getPriority();
+        int[]majorId=university.getMajorId();
         int trainSystem = university.getTrainSystem().getId();
         boolean isCreated = universityService.addUniversity(code, name, email, phone, logo, image, priority, description, trainSystem);
         University uni = universityService.getUniversityByCode(code);

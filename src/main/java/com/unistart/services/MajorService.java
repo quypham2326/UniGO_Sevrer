@@ -110,4 +110,15 @@ public class MajorService implements MajorServiceInterface {
         return majorRepository.findByGroupMajorId(groupMajorID);
     }
 
+    @Override
+    public boolean createMajor(Major major) {
+        Major m=new Major();
+        m.setIsActive(true);
+        m.setDescription(major.getDescription());
+        m.setGroupMajor(major.getGroupMajor());
+        m.setMajorName(major.getMajorName());
+        majorRepository.save(m);
+        return true;
+    }
+
 }

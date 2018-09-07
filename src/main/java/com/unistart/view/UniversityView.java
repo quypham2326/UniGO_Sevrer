@@ -12,6 +12,7 @@ package com.unistart.view;
 public class UniversityView {
 
     public interface Simple {
+        
     }
 
     public interface LocationAndAddressIncluded {

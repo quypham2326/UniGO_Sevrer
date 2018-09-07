@@ -40,6 +40,7 @@ public class UrlConstant {
     public static final String GET_ALL_BLOCK = "/get-all-block";
 
     //MAJOR
+    public static final String CREATE_MAJOR="create-major";
     public static final String SHOWMAJOR = "/show-major";
     public static final String SAVE_DETAIL_MAJOR = "/save-detail-major";
     public static final String GET_ALL_MAJOR_OF_UNIVERSITY = "/get-major-uni";

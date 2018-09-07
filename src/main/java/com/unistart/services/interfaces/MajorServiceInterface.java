@@ -33,4 +33,5 @@ public interface MajorServiceInterface {
     List<MajorUniversity> getForTag(int uniId);
     
     List<Major> findByGroupMajorId(int groupMajorID);
+    boolean createMajor(Major major);
 }
