@@ -79,5 +79,6 @@ public class MajorController {
         boolean isCreated=majorService.createMajor(major);
         return new ResponseEntity<Boolean>(isCreated, HttpStatus.OK);
     }
+    
 
 }

@@ -17,6 +17,7 @@ public interface QARepository extends JpaRepository <QuestionAnswer, Integer>{
 			+ " where id = ?1")
 	QuestionAnswer getCountByQaId(int id);
 	
+        
 	@Modifying
 	@Query("update QuestionAnswer qa set qa.count = ?1 where id = ?2")
 	void updateCount(int count, int id);

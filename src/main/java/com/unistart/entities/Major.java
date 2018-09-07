@@ -26,74 +26,50 @@ public class Major implements java.io.Serializable {
 
 	private Integer id;
 	private GroupMajor groupMajor;
-	private String majorName;
-	private String description;
+	private String nameMajor;
+	private String des;
 	private boolean isActive;
 	private Set<MajorUniversity> majorUniversities = new HashSet<MajorUniversity>(0);
 	private Set<MajorMbti> majorMbtis = new HashSet<MajorMbti>(0);
 	private Set<BlockOfMajor> blockOfMajors = new HashSet<BlockOfMajor>(0);
-        private int[] mbtiTypeId;
-        private int [] blockId;
-
-    public int[] getBlockId() {
-        return blockId;
-    }
-
-    public void setBlockId(int[] blockId) {
-        this.blockId = blockId;
-    }
-
-    public Major(GroupMajor groupMajor, String majorName, String description, int[] mbtiTypeId, int[] blockId) {
-        this.groupMajor = groupMajor;
-        this.majorName = majorName;
-        this.description = description;
-        this.mbtiTypeId = mbtiTypeId;
-        this.blockId = blockId;
-    }
-
-    public int[] getMbtiTypeId() {
-        return mbtiTypeId;
-    }
-
-    public void setMbtiTypeId(int[] mbtiTypeId) {
-        this.mbtiTypeId = mbtiTypeId;
-    }
-        
-    
         
 	public Major() {
 	}
 
-	public Major(Integer id, String majorName, boolean isActive) {
+    public Major(Integer id) {
+        this.id = id;
+    }
+
+	public Major(Integer id, String nameMajor, boolean isActive) {
 		this.id = id;
-		this.majorName = majorName;
+		this.nameMajor = nameMajor;
 		this.isActive = isActive;
 	}
 
-	public Major(Integer id, String majorName) {
+	public Major(Integer id, String nameMajor) {
 		super();
 		this.id = id;
-		this.majorName = majorName;
+		this.nameMajor = nameMajor;
 	}
 
-	public Major(Integer id, String majorName, String description, boolean isActive,
+	public Major(Integer id, String nameMajor, String des, boolean isActive,
 			Set<MajorUniversity> majorUniversities, Set<MajorMbti> majorMbtis, Set<BlockOfMajor> blockOfMajors) {
 		this.id = id;
-		this.majorName = majorName;
-		this.description = description;
+		this.nameMajor = nameMajor;
+		this.des = des;
 		this.isActive = isActive;
 		this.majorUniversities = majorUniversities;
 		this.majorMbtis = majorMbtis;
 		this.blockOfMajors = blockOfMajors;
 	}
 
-	public Major(Integer id, GroupMajor groupMajor, String majorName, String description, boolean isActive,
+	public Major(Integer id, GroupMajor groupMajor, String nameMajor, String des, boolean isActive,
 			Set<MajorUniversity> majorUniversities, Set<MajorMbti> majorMbtis, Set<BlockOfMajor> blockOfMajors) {
 		super();
 		this.id = id;
 		this.groupMajor = groupMajor;
-		this.majorName = majorName;
-		this.description = description;
+		this.nameMajor = nameMajor;
+		this.des = des;
 		this.isActive = isActive;
 		this.majorUniversities = majorUniversities;
 		this.majorMbtis = majorMbtis;
@@ -113,20 +89,20 @@ public class Major implements java.io.Serializable {
 
 	@Column(name = "MajorName", nullable = false)
 	public String getMajorName() {
-		return this.majorName;
+		return this.nameMajor;
 	}
 
-	public void setMajorName(String majorName) {
-		this.majorName = majorName;
+	public void setMajorName(String nameMajor) {
+		this.nameMajor = nameMajor;
 	}
 
 	@Column(name = "Description")
 	public String getDescription() {
-		return this.description;
+		return this.des;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescription(String des) {
+		this.des = des;
 	}
 
 	@Column(name = "IsActive", nullable = false)

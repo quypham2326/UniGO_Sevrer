@@ -40,7 +40,7 @@ public class UrlConstant {
     public static final String GET_ALL_BLOCK = "/get-all-block";
 
     //MAJOR
-    public static final String CREATE_MAJOR="create-major";
+    public static final String CREATE_MAJOR="/create-major";
     public static final String SHOWMAJOR = "/show-major";
     public static final String SAVE_DETAIL_MAJOR = "/save-detail-major";
     public static final String GET_ALL_MAJOR_OF_UNIVERSITY = "/get-major-uni";
@@ -124,10 +124,10 @@ public class UrlConstant {
     //Report
     public static final String REPORT = "/report";
     
-//Group Major
+    //Group Major
     public static final String GROUP_MAJOR = "/group-major";
     public static final String SHOW_GROUP_MAJOR = "/show-group-major";
-    public static final String SHOW_MAJOR_IN_GROUP = "show-major-in-group";
+    public static final String SHOW_MAJOR_IN_GROUP = "/show-major-in-group";
 
     //Train System
     public static final String TRAIN_SYSTEM = "/train-system";
@@ -135,4 +135,6 @@ public class UrlConstant {
     //Mbti type
     public static final String MBTI_TYPE = "/mbti-type";
     public static final String GET_ALL_MBTI_TYPE = "/get-all-mbti-type";
+    //
+    public static final String MAJOR_MBTI="/major-mbti";
 }

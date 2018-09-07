@@ -35,6 +35,10 @@ public class Mbtitype implements java.io.Serializable {
 	public Mbtitype() {
 	}
 
+    public Mbtitype(Integer id) {
+        this.id = id;
+    }
+
 	public Mbtitype(Integer id, boolean isActive) {
 		this.id = id;
 		this.isActive = isActive;
