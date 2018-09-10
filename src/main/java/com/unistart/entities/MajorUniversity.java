@@ -40,6 +40,7 @@ public class MajorUniversity implements java.io.Serializable {
 	private Boolean isActive;
 	private String majorName;
 	private int majorId;
+        
 	@JsonManagedReference
 	private Set<BlockMajorUniversity> blockMajorUniversities = new HashSet<BlockMajorUniversity>(0);
 

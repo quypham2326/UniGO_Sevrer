@@ -74,7 +74,31 @@ public class University implements java.io.Serializable {
     private Boolean isActive;
 
     private Set<Review> reviews = new HashSet<Review>(0);
+    
+    private int[]majorId;
 
+    public University( TrainSystem trainSystem, String code, String name, String email, String phone, String logo, String description, String image, Integer priority, int[] majorId) {
+        this.trainSystem = trainSystem;
+        this.code = code;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.logo = logo;
+        this.description = description;
+        this.image = image;
+        this.priority = priority;
+        this.majorId = majorId;
+    }
+
+   
+
+    public int[] getMajorId() {
+        return majorId;
+    }
+
+    public void setMajorId(int[] majorId) {
+        this.majorId = majorId;
+    }
     @JsonManagedReference
     private Set<MajorUniversity> majorUniversities = new HashSet<MajorUniversity>(0);
 

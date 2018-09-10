@@ -37,6 +37,12 @@ public class GroupMajor {
 		this.name = name;
 		this.majors = majors;
 	}
+
+    public GroupMajor(Integer id, String code, String name) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+    }
 	
 	public GroupMajor(Integer id, String code, String name, boolean isActive, Set<Major> majors) {
 		super();
@@ -46,6 +52,14 @@ public class GroupMajor {
 		this.isActive = isActive;
 		this.majors = majors;
 	}
+
+    public GroupMajor(String code, String name, boolean isActive) {
+        this.code = code;
+        this.name = name;
+        this.isActive = isActive;
+    }
+
+    
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id", unique = true, nullable = false)

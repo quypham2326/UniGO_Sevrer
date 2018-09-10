@@ -34,18 +34,19 @@ public class UrlConstant {
     public static final String GET_BY_MAJOR_ID = "/get-by-major-id";
     public static final String GET_LOCATION_BY_ID = "/get-location-by-uni";
     public static final String GET_TOP_UNIVERSITY = "/top10";
-    
+
     //BLOCK
     public static final String BLOCK = "/block";
     public static final String GET_ALL_BLOCK = "/get-all-block";
 
     //MAJOR
+    public static final String CREATE_MAJOR="/create-major";
     public static final String SHOWMAJOR = "/show-major";
     public static final String SAVE_DETAIL_MAJOR = "/save-detail-major";
     public static final String GET_ALL_MAJOR_OF_UNIVERSITY = "/get-major-uni";
     public static final String GET_FOR_TAG = "/get-major-for-tag";
     public static final String GET_MOST_POPULAR_MAJOR = "/get-popular-major";
-    
+
     //LOCATION
     public static final String LOCATION = "/location";
     public static final String SHOW_LOCATION = "/show-location";
@@ -70,6 +71,7 @@ public class UrlConstant {
     public static final String SHOW_MBTI_QUESTION = "/show-mbti-question";
     public static final String GET_MBTI_RESULT = "/get-mbti-results";
     public static final String GET_MBTI_MAJOR = "/get-mbti-major";
+    public static final String GET_MBTI_TYPE = "/get-mbti-type";
 
     //SCORE
     public static final String SCORE = "/score";
@@ -121,5 +123,18 @@ public class UrlConstant {
 
     //Report
     public static final String REPORT = "/report";
+    
+    //Group Major
+    public static final String GROUP_MAJOR = "/group-major";
+    public static final String SHOW_GROUP_MAJOR = "/show-group-major";
+    public static final String SHOW_MAJOR_IN_GROUP = "/show-major-in-group";
 
+    //Train System
+    public static final String TRAIN_SYSTEM = "/train-system";
+
+    //Mbti type
+    public static final String MBTI_TYPE = "/mbti-type";
+    public static final String GET_ALL_MBTI_TYPE = "/get-all-mbti-type";
+    //
+    public static final String MAJOR_MBTI="/major-mbti";
 }

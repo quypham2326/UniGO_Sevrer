@@ -18,6 +18,7 @@ import com.unistart.entities.MajorUniversity;
 import com.unistart.error.ErrorNotification;
 import com.unistart.entities.University;
 import com.unistart.services.interfaces.MajorServiceInterface;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping(UrlConstant.UNIVERSITY)
@@ -72,5 +73,12 @@ public class MajorController {
         List<MajorUniversity> major = majorService.getForTag(uniId);
         return new ResponseEntity<List<MajorUniversity>>(major, HttpStatus.OK);
     }
+    @PostMapping(value = UrlConstant.CREATE_MAJOR)
+    public ResponseEntity<?> createMajor(@RequestBody Major major)
+    {
+        boolean isCreated=majorService.createMajor(major);
+        return new ResponseEntity<Boolean>(isCreated, HttpStatus.OK);
+    }
+    
 
 }
