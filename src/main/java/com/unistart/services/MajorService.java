@@ -121,4 +121,9 @@ public class MajorService implements MajorServiceInterface {
         return true;
     }
 
+    @Override
+    public Major findById(int id) {
+        return majorRepository.findById(id);
+    }
+
 }

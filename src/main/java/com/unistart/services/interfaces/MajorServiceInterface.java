@@ -34,4 +34,5 @@ public interface MajorServiceInterface {
     
     List<Major> findByGroupMajorId(int groupMajorID);
     boolean createMajor(Major major);
+    Major findById(int id);
 }
