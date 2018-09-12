@@ -126,4 +126,9 @@ public class MajorService implements MajorServiceInterface {
         return majorRepository.findById(id);
     }
 
+    @Override
+    public Major findByNameMajor(String nameMajor) {
+        return majorRepository.findByNameMajor(nameMajor);
+    }
+
 }

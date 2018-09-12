@@ -77,7 +77,8 @@ public class MajorController {
     public ResponseEntity<?> createMajor(@RequestBody Major major)
     {
         boolean isCreated=majorService.createMajor(major);
-        Major ma=majorService.findById(major.getId());
+        Major ma=majorService.findByNameMajor(major.getMajorName());
+        System.out.println(ma.getId());
         return new ResponseEntity<Major>(ma, HttpStatus.OK);
     }
     

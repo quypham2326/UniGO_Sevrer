@@ -27,6 +27,8 @@ public interface MajorRepository extends CrudRepository<Major, Integer> {
     }
 
     Major findById(int id);
+    @Query("select new com.unistart.entities.Major(m.id, m.majorName) from Major m where m.isActive = true and m.majorName=?1")
+    Major findByNameMajor(String nameMajor);
     List<Major> findByGroupMajorId(int groupMajorID);
 
 }
