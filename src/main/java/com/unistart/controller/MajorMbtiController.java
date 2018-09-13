@@ -27,6 +27,7 @@ public class MajorMbtiController{
     @PostMapping(value =  UrlConstant.CREATE)
     public ResponseEntity<?> createMajorMbti(@RequestBody List<MajorMbti> listMajorMbti)
     {
+        System.out.println("ahihi");
         listMajorMbti.forEach((majorMbti) -> {
             majorMbtiServiceInterface.createMajorMbti(majorMbti);
         });
