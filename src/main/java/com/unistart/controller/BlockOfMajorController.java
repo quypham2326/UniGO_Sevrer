@@ -6,9 +6,8 @@
 package com.unistart.controller;
 
 import com.unistart.constant.UrlConstant;
-import com.unistart.entities.MajorMbti;
-import com.unistart.services.MajorMbtiService;
-import com.unistart.services.interfaces.MajorMbtiServiceInterface;
+import com.unistart.entities.BlockOfMajor;
+import com.unistart.services.interfaces.BlockOfMajorServiceInterface;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,17 +17,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ *
+ * @author Le Nguyen
+ */
 @RestController
-@RequestMapping(value = UrlConstant.MAJOR_MBTI)
-public class MajorMbtiController{    
+@RequestMapping(value = UrlConstant.BLOCK_OF_MAJOR)
+public class BlockOfMajorController {
     @Autowired
-    private MajorMbtiService majorMbtiServiceInterface;
-    
-    @PostMapping(value =  UrlConstant.CREATE)
-    public ResponseEntity<?> createMajorMbti(@RequestBody List<MajorMbti> listMajorMbti)
+    BlockOfMajorServiceInterface blockOfMajorService;
+    @PostMapping(value = UrlConstant.CREATE)
+    public ResponseEntity<?> createBlockOfMajor(@RequestBody List<BlockOfMajor> blockOfMajors)
     {
-        listMajorMbti.forEach((majorMbti) -> {
-            majorMbtiServiceInterface.createMajorMbti(majorMbti);
+        blockOfMajors.forEach((blockOfMajor) -> {
+            blockOfMajorService.createBlockOfMajor(blockOfMajor.getBlock(), blockOfMajor.getMajor());
         });
         return new ResponseEntity<Boolean>(true,HttpStatus.OK);
     }

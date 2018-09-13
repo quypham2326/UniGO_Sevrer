@@ -38,6 +38,10 @@ public class Block implements java.io.Serializable {
 		this.blockName = blockName;
 	}
 
+    public Block(Integer id) {
+        this.id = id;
+    }
+
 	public Block(Integer id, String blockName, String description, Boolean isActive,
 			Set<BlockOfMajor> blockOfMajors, Set<BlockMajorUniversity> blockMajorUniversities) {
 		this.id = id;

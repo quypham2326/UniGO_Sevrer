@@ -4,6 +4,8 @@ package com.unistart.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -35,9 +37,20 @@ public class BlockOfMajor implements java.io.Serializable {
 		this.isActive = isActive;
 	}
 
-	@Id
+    public BlockOfMajor(Block block, Major major, Boolean isActive) {
+        this.block = block;
+        this.major = major;
+        this.isActive = isActive;
+    }
 
+    public BlockOfMajor(Block block, Major major) {
+        this.block = block;
+        this.major = major;
+    }
+
+	@Id
 	@Column(name = "Id", unique = true, nullable = false)
+        @GeneratedValue(strategy=GenerationType.AUTO)
 	public Integer getId() {
 		return this.id;
 	}

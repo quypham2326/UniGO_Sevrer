@@ -135,6 +135,10 @@ public class UrlConstant {
     //Mbti type
     public static final String MBTI_TYPE = "/mbti-type";
     public static final String GET_ALL_MBTI_TYPE = "/get-all-mbti-type";
-    //
+    
+    //Major mbti
     public static final String MAJOR_MBTI="/major-mbti";
+    
+    //Block of major
+    public static final String BLOCK_OF_MAJOR="/block-of-major";
 }

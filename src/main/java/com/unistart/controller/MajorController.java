@@ -78,7 +78,6 @@ public class MajorController {
     {
         boolean isCreated=majorService.createMajor(major);
         Major ma=majorService.findByNameMajor(major.getMajorName());
-        System.out.println(ma.getId());
         return new ResponseEntity<Major>(ma, HttpStatus.OK);
     }
     
